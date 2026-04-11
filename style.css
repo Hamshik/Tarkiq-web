@@ -99,19 +99,6 @@ header {
     opacity: 0.75;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 15px 20px;
-    border-radius: 50px;
-    flex-wrap: nowrap;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -271,78 +258,6 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    nav {
-        padding: 10px 20px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .nav-links a {
-        margin: 5px 10px;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .features {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    section {
-        margin: 30px auto;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    pre {
-        font-size: 0.8rem;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 5px;
-        align-items: center;
-        flex-shrink: 0;
-    }
-
-    .nav-links a {
-        margin: 0;
-
-    }
-}
-
 @media (max-width: 880px) {
     .navbar {
         backdrop-filter: none;
@@ -379,8 +294,31 @@ footer {
     .navbar-toggle.active .bar:nth-child(2){
         opacity: 0;
     }
+    
     .navbar-toggle.active .bar:nth-child(1) {
         transform: translate(8px) rotate(45deg);
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    section {
+        margin: 30px auto;
+        padding: 15px;
     }
 }
 
@@ -396,5 +334,38 @@ footer {
     .navbar-container .navbar-menu li a {
         font-size: 1.2rem;
         padding: 3px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    pre {
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .nav-links a {
+        margin: 0;
+
     }
 }
