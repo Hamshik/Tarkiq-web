@@ -30,6 +30,7 @@
   --success: oklch(0.7 0.12 160);
   --info: oklch(0.7 0.12 260);
 }
+
 body.light {
   /* hsl (fallback color) */
   --bg-dark: hsl(188 86% 85%);
@@ -112,6 +113,20 @@ nav {
     border-radius: 25%;
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: var(--text);
+}
+
 /* Hero */
 .hero {
     text-align: center;
@@ -135,6 +150,7 @@ nav {
     background: var(--bg-light);
     color: var(--text);
     border-radius: 6px;
+    border-color: var(--border);
     text-decoration: none;
 }
 
@@ -147,7 +163,7 @@ section {
 
 h2 {
     margin-bottom: 20px;
-    color: var(--text-muted);
+    color: var(--text);
 }
 
 /* Features */
@@ -158,21 +174,17 @@ h2 {
 }
 
 .card {
-    background: var(--info);
+    background: var(--bg);
     padding: 20px;
     border-radius: 10px;
     color: var(--text-muted);
-    box-shadow: 0 5px 15px var(--border-muted);
+    box-shadow: 0 5px 15px var(--border);
     text-align: center;
 }
 
-/* Code block */
-pre {
-    background: #111;
-    color: #0f0;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
+body.light pre {
+    background: #f4f4f4;
+    color: #333;
 }
 
 /* Footer */
@@ -184,17 +196,63 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
     }
 
     .nav-links {
-        display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
     .nav-links a {
-        margin: 5px;
+        margin: 5px 10px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    section {
+        margin: 30px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    pre {
+        font-size: 0.8rem;
     }
 }
