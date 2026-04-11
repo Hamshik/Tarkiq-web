@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarkiq-lang</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkiq-lang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-<nav>
-    <div class="logo">Tarkiq-lang</div>
-    <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#docs">Docs</a>
-        <a href="#install">Install</a>
-        <a href="https://github.com/hamshik/tarkiq-lang" target="_blank">GitHub</a>
-        <button id="theme-toggle" class="btn">🌙</button>
-    </div>
-</nav>
-</header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Tarkiq-lang</a>
+            <button class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#features" class="active">Features</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<section class="hero">
-    <h1>Build Fast with Tarkiq</h1>
-    <p>A modern, safe, and beginner-friendly programming language</p>
-    <a href="#install" class="btn">Get Started</a>
-</section>
+    <section class="hero">
+        <h1>Build Fast with Tarkiq</h1>
+        <p>A modern, safe, and beginner-friendly programming language</p>
+        <a href="#install" class="btn">Get Started</a>
+    </section>
 
-<section id="features">
-    <h2>Features</h2>
-    <div class="features">
-        <div class="card">Simple Syntax</div>
-        <div class="card">Fast Execution (Compiled via LLVM)</div>
-        <div class="card">Beginner Friendly</div>
-        <div class="card">Memory Safe than C/C++</div>
-        <div class="card">Strong Static Typing</div>
-        <div class="card">Rich Numeric Types (i8-i128, u8-u128, f32-f128)</div>
-        <div class="card">Built-in Memory Management</div>
-        <div class="card">UTF-8 String Support</div>
-        <div class="card">Hash Table Library</div>
-        <div class="card">Cross-platform</div>
-    </div>
-</section>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="card">Simple Syntax</div>
+            <div class="card">Fast Execution (Compiled via LLVM)</div>
+            <div class="card">Beginner Friendly</div>
+            <div class="card">Memory Safe than C/C++</div>
+            <div class="card">Strong Static Typing</div>
+            <div class="card">Rich Numeric Types (i8-i128, u8-u128, f32-f128)</div>
+            <div class="card">Built-in Memory Management</div>
+            <div class="card">UTF-8 String Support</div>
+            <div class="card">Hash Table Library</div>
+            <div class="card">Cross-platform</div>
+        </div>
+    </section>
 
-<section id="docs">
-    <h2>Example Code</h2>
-    <pre>
+    <section id="docs">
+        <h2>Example Code</h2>
+        <pre>
 print("Hello, Tarkiq!");
     </pre>
-</section>
+    </section>
 
-<section id="install">
-    <h2>Installation</h2>
-    <p style="color: var(--text-muted);">Download from GitHub and run installer.</p>
-</section>
+    <section id="install">
+        <h2>Installation</h2>
+        <p style="color: var(--text-muted);">Download from GitHub and run installer.</p>
+    </section>
 
-<footer>
-    <p>© 2026 Tarkiq</p>
-</footer>
+    <footer>
+        <p>© 2026 Tarkiq</p>
+    </footer>
 
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light');
-        themeToggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
-    });
-</script>
+    <script src="script.js">
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light');
+            themeToggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+        });
+    </script>
 
 </body>
+
 </html>
