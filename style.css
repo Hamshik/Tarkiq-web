@@ -182,9 +182,12 @@ h2 {
     text-align: center;
 }
 
-body.light pre {
-    background: #f4f4f4;
-    color: #333;
+pre {
+    background: var(--bg);
+    color: var(--text-muted);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
 }
 
 /* Footer */
