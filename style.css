@@ -30,7 +30,9 @@
   --success: oklch(0.7 0.12 160);
   --info: oklch(0.7 0.12 260);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body.light {
   /* hsl (fallback color) */
   --bg-dark: hsl(188 86% 85%);
@@ -66,6 +68,7 @@ body.light {
 
 body{
     background-color: var(--bg-dark);
+    padding-top: 100px; /* Space for fixed header */
 }
 
 * {
@@ -76,10 +79,21 @@ body{
 
 /* Header */
 header {
-    position: sticky;
-    top: 0;
-    background: --bg-dark;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 95%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(15, 25, 40, 0.65);
+    border-radius: 50px;
+    padding: 10px;
+    optique: 0.75;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
 
 nav {
@@ -87,9 +101,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 15px 20px;
-    background-color: var(--bg);
+    border-radius: 50px;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -98,19 +114,26 @@ nav {
     color: var(--text);
 }
 
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+
 .nav-links a {
-    margin-left: 20px;
     text-decoration: none;
-    background-color: var(--bg);
     color: var(--text-muted);
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 8px 12px;
+    border-radius: 999px;
 }
 
 .nav-links a:hover {
-    background-color: var(--bg-light);
-    color: var(--text-muted);
-    border-radius: 25%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text);
 }
 
 #theme-toggle {
