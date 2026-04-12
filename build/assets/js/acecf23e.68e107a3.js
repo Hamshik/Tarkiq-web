@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktarkiq_lang=self.webpackChunktarkiq_lang||[]).push([["3220"],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);

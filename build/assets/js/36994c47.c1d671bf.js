@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktarkiq_lang=self.webpackChunktarkiq_lang||[]).push([["191"],{5516(a){a.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);
