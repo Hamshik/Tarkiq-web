@@ -69,8 +69,8 @@ body.light {
 }
 
 body {
-    background-color: var(--bg-dark);
-    padding-top: 100px;
+    background: linear-gradient(45deg, var(--bg-dark), var(--bg-light));
+    padding-top: 80px;
     min-height: 100vh;
     /* Space for fixed header */
 }
@@ -105,11 +105,12 @@ header {
     justify-content: center;
     height : 80px;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: transparent;
     box-shadow: 0 10px 20px var(--border);
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
     z-index: 999;
 }
 
@@ -150,9 +151,9 @@ header {
 
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a:active{
-    color: var(--text-muted);
-    background-color: var(--bg-light);
-    border: 2px solid var(--border-muted);
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
 }
 
 .navbar-toggle {
@@ -269,13 +270,13 @@ footer {
         align-items: flex-start;
         gap: 1.7rem !important;
         position: absolute;
-        height: 100px;
+        height: 100vh;
         width: 100%;
         top: 0;
         right: 0;
         padding: 5rem 1.5rem;
         box-shadow: var(--border-muted);
-        backdrop-filter: blur(10px);
+        backdrop-filter: var(--blur);
     }
 
     .navbar-container .navbar-menu.active {
@@ -296,7 +297,7 @@ footer {
     }
     
     .navbar-toggle.active .bar:nth-child(1) {
-        transform: translate(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
 
     .hero {

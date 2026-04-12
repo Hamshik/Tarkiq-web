@@ -14,8 +14,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo">Tarkiq-lang</a>
-            <button class="nav-toggle">
-                <span class="bar"></span>
+            <button class="navbar-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -25,6 +24,7 @@
                 <li><a href="#docs">Documentation</a></li>
                 <li><a href="#install">Installation</a></li>
                 <li><a href="#community">Community</a></li>
+                <li><a href="#theme-toggle" id="theme-toggle">🌙</a></li>
             </ul>
         </div>
     </nav>
@@ -67,13 +67,7 @@ print("Hello, Tarkiq!");
         <p>© 2026 Tarkiq</p>
     </footer>
 
-    <script src="script.js">
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            themeToggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
