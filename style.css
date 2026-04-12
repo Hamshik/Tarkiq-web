@@ -98,7 +98,7 @@ nav{
     width: 100%;
     position: fixed;
     border-radius: 50px;
-    top: 0;
+    top: 20px;
     box-shadow: 0 10px 20px var(--border);
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
@@ -264,7 +264,7 @@ footer {
         align-items: flex-start;
         gap: 1.7rem !important;
         position: absolute;
-        height: 100vh;
+        height: 200vh;
         width: 100%;
         top: 0;
         right: 0;
